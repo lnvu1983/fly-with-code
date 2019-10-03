@@ -2,17 +2,18 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
 }
 
 div {
 	display: flex;
 	flex-direction: column;
-	text-align: justify;
 }
 
 .section {
 	margin: 10px 20px 35px 20px;
 	width: calc(100% - 40px);
+	text-align: justify;
 }
 
 .section .title {
@@ -46,7 +47,8 @@ div {
 .plans .details .item .content {
 	margin-top: 5px;
 	margin-bottom: 0px;
-	font-size: 15px;
+	line-height: 17px;
+	font-size: 13px;
 }
 
 .template {
@@ -55,4 +57,18 @@ div {
 
 .hide {
 	display: none !important;
+}
+
+@media only screen and (max-width: 768px) {
+	.plans .details {
+		flex-direction: column;
+	}
+
+	.plans .details .item {
+		width: calc(100% - 20px);
+	}
+
+	.plans .details .item:not(:first-of-type) {
+		margin-top: 10px;
+	}
 }
