@@ -1,4 +1,4 @@
-$(document).ready(function() {
+function initPlan() {
 	$.getJSON('data/plan.json', function(data) {
 		const planObject = $('.plans');
 		const template = planObject.find('.details .item.template');
@@ -21,4 +21,20 @@ $(document).ready(function() {
 
 		planObject.removeClass('hide');
 	});
+}
+
+function initScrollAnimation() {
+	$('.menu-item').click(function(e) {
+		e.preventDefault();
+
+		$('html, body').animate({
+			scrollTop: $('#' + $(this).attr('href')).offset().top - 35
+		}, 800);
+	});
+}
+
+$(document).ready(function() {
+	initScrollAnimation();
+
+	initPlan();
 });
