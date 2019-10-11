@@ -1,14 +1,16 @@
 function initPlan() {
 	$.getJSON('data/plan.json', function(data) {
 		const planObject = $('.plans');
-		const template = planObject.find('.details .item.template');
+		const template = planObject.find('.item.template');
 		const container = template.parent();
 
 		template.removeClass("template");
 
 		data.forEach(function (item, index) {
 			const itemObject = template.clone();
+			const title = index == 2 ? 'Next plan' : (index == 1 ? 'Current plan' : 'Last plan');
 
+			itemObject.find('.title').html(title);
 			itemObject.find('.date').html(item.date);
 			itemObject.find('.time').html(item.time);
 			itemObject.find('.place').html(item.place);
@@ -28,13 +30,22 @@ function initScrollAnimation() {
 		e.preventDefault();
 
 		$('html, body').animate({
-			scrollTop: $('#' + $(this).attr('href')).offset().top - 35
+			scrollTop: $('#' + $(this).attr('href')).offset().top - 60
 		}, 800);
+	});
+}
+
+function initMemberSlider() {
+	$('#members .mem-list').slick({
+		autoplay: true,
+		auplaySpeed: 500,
+		arrows: false
 	});
 }
 
 $(document).ready(function() {
 	initScrollAnimation();
 
+	initMemberSlider();
 	initPlan();
 });

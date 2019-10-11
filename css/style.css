@@ -4,19 +4,28 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
 	text-align: justify;
+	max-width: 100%;
 }
 
-div {
+div,
+header,
+footer {
 	display: flex;
 	flex-direction: column;
 }
 
-.section:not(header) {
-	margin: 10px 20px 35px 20px;
-	width: calc(100% - 40px);
+.container {
+	width: 100%;
+	max-width: 100%;
 }
 
-.section .title {
+.section:not(header):not(footer) {
+	margin: 10px 0px 35px 0px;
+	padding-left: 350px;
+	padding-right: 350px;
+}
+
+.dummy .title {
 	margin-bottom: 8px;
 	text-align: center;
 	font-weight: bold;
@@ -27,14 +36,12 @@ header .navigation {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+	z-index: 2;
 	width: 100%;
 	background-color: #4EC33D;
-	height: 33px;
+	height: 34px;
 	margin: 0;
 	position: fixed; /*Cho menu cố định 1 vị trí với top và left*/
-}
-
-header .navigation .logo {
 }
 
 header .navigation .logo img {
@@ -83,37 +90,88 @@ header .banner img {
 header .slogan p {
 	text-transform: uppercase;
 	font-family: 'Saira Stencil One', cursive;
-	font-size: 300%;
+	font-size: 3rem;
 	color: #F85846;
 	text-align: center;
 }
 
-.plans .details {
+.section.members .title {
+	margin-bottom: 15px;
+	font-family: 'Saira Stencil One', cursive;
+	font-size: 2.5rem;
+	color: #F85846;
+	text-align: center;
+}
+
+.section.members .mem-list .item {
+	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	align-items: center;
 }
 
-.plans .details .item {
-	width: 25%;
-	padding: 10px;
-	border: 1px solid black;
-	border-radius: 10px;
+.section.members .mem-list .item .content {
+	padding-left: 10px;
 }
 
-.plans .details .item:hover {
-	border-color: white;
-	box-shadow: 0 0 0 4px gray;
+.section.members .mem-list .item .name {
+	font-size: 20px;
+	font-weight: bold;
 }
 
-.plans .details .item > div {
-	margin-bottom: 5px;
+.section.members .mem-list .item .quote {
+	margin-top: 10px;
+	font-size: 13px;
 }
 
-.plans .details .item .content {
+.section.plans {
+	padding-left: 0px;
+	padding-right: 0px;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.section.plans .item {
+	width: 33.33%;
+	padding: 20px 15px;
+	background-color: #BABABA5C;
+}
+
+.section.plans .item:hover {
+	box-shadow: 0px 0px 10px 3px #888888;
+}
+
+.section.plans .item > div {
+	margin-bottom: 8px;
+	font-size: 14px;
+}
+
+.section.plans .item .title {
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.section.plans .item .content {
 	margin-top: 5px;
 	margin-bottom: 0px;
 	line-height: 17px;
 	font-size: 13px;
+}
+
+footer {
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0px 10px 20px 10px;
+	align-items: center;
+}
+
+footer .social {
+	flex-direction: row;
+}
+
+footer .social .fab {
+	margin-left: 10px;
+	font-size: 35px;
 }
 
 .template {
@@ -125,15 +183,61 @@ header .slogan p {
 }
 
 @media only screen and (max-width: 768px) {
-	.plans .details {
+	header .navigation {
+		flex-direction: column;
+		height: 59px;
+	}
+
+	header .navigation .logo {
+		align-items: center;
+	}
+
+	header .navigation .topnav {
+		width: 100%;
+	}
+
+	header .navigation .topnav a {
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	header .banner {
+		margin-top: 55px;
+	}
+
+	.section:not(header):not(footer) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.section.plans {
 		flex-direction: column;
 	}
 
-	.plans .details .item {
-		width: calc(100% - 20px);
+	.section.plans .item {
+		width: calc(100% - 30px);
+	}
+}
+
+
+@media only screen and (max-width: 320px) {
+	header .navigation .topnav a {
+		font-size: 13px;
 	}
 
-	.plans .details .item:not(:first-of-type) {
-		margin-top: 10px;
+	header .slogan p {
+		font-size: 2.5rem;
+	}
+
+	.section.members .item img {
+		width: 35%;
+	}
+
+	footer {
+		flex-direction: column;
+	}
+
+	footer .copyright {
+		margin-bottom: 10px;
 	}
 }
