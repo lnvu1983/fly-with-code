@@ -43,9 +43,21 @@ function initMemberSlider() {
 	});
 }
 
+function calcBannerTop() {
+	const navHeight = $('header .navigation').outerHeight();
+	
+	$('header .banner').css('padding-top', navHeight);
+}
+
 $(document).ready(function() {
+	$(window).resize(function(e) {
+		calcBannerTop();
+	});
+
 	initScrollAnimation();
 
 	initMemberSlider();
 	initPlan();
+
+	calcBannerTop();
 });

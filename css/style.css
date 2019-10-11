@@ -201,10 +201,6 @@ footer .social .fab {
 		padding-bottom: 4px;
 	}
 
-	header .banner {
-		margin-top: 55px;
-	}
-
 	.section:not(header):not(footer) {
 		padding-left: 10px;
 		padding-right: 10px;
