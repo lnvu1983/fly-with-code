@@ -38,7 +38,7 @@ function initScrollAnimation() {
 function initMemberSlider() {
 	$('#members .mem-list').slick({
 		autoplay: true,
-		auplaySpeed: 500,
+		autoplaySpeed: 3500,
 		arrows: false
 	});
 }
