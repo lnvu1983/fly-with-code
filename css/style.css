@@ -1,10 +1,11 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto', sans-serif;
+	max-width: 100%;
+	font-family: 'Saira Semi Condensed', cursive;
 	font-size: 1rem;
 	text-align: justify;
-	max-width: 100%;
+	color: #353643;
 }
 
 div,
@@ -12,6 +13,10 @@ header,
 footer {
 	display: flex;
 	flex-direction: column;
+}
+
+a {
+	color: #353643;
 }
 
 .container {
@@ -23,13 +28,6 @@ footer {
 	margin: 10px 0px 35px 0px;
 	padding-left: 350px;
 	padding-right: 350px;
-}
-
-.dummy .title {
-	margin-bottom: 8px;
-	text-align: center;
-	font-weight: bold;
-	font-size: 20px;
 }
 
 header .navigation {
@@ -95,6 +93,11 @@ header .slogan p {
 	text-align: center;
 }
 
+.section.about-us div {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 .section.members .title {
 	margin-bottom: 15px;
 	font-family: 'Saira Stencil One', cursive;
@@ -107,6 +110,12 @@ header .slogan p {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	cursor: grab;
+	outline: none;
+}
+
+.section.members .mem-list .item img {
+	max-width: 200px;
 }
 
 .section.members .mem-list .item .content {
