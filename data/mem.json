@@ -25,6 +25,11 @@
 		"quote": "Don't judge a book by it's cover."
 	},
 	{
+		"avatar": "minh.jpg",
+		"name": "Minh",
+		"quote": "Cái gì làm được hôm nay thì cứ để ngày mai..."
+	},
+	{
 		"avatar": "",
 		"name": "Quang",
 		"quote": ""
@@ -35,9 +40,9 @@
 		"quote": ""
 	},
 	{
-		"avatar": "",
+		"avatar": "hoang.jpg",
 		"name": "Hoàng",
-		"quote": ""
+		"quote": "Có công mài sắt có ngày nên kim - Người ta nói ngả nói nghiêng, lòng ta vẫn vững như kiềng 3 chân...."
 	},
 	{
 		"avatar": "",
