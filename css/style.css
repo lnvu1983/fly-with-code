@@ -5,7 +5,7 @@ body {
 	font-family: 'Saira Semi Condensed', cursive;
 	font-size: 1.1rem;
 	text-align: justify;
-	color: #353643;
+	color: blue;
 }
 
 div,
@@ -13,12 +13,11 @@ header,
 footer {
 	display: flex;
 	flex-direction: column;
-
 }
 
 header {
 	background-color: #151B25;
-	background-image: linear-gradient(#151B25, #151B25,rgb(56, 72, 100), #89CFF0,lightgray,white);
+	background-image: linear-gradient(#151B25, #151B25, rgb(56, 72, 100), #89CFF0, lightgray, white);
 }
 
 a {
@@ -36,7 +35,8 @@ a {
 	padding-right: 17%;
 	color: #DBE8E1;
 }
-.slogan p{
+
+.slogan p {
 	margin: 70px;
 	margin-bottom: 20px;
 }
@@ -50,7 +50,7 @@ header .navigation {
 	background-color: #151B25;
 	height: 34px;
 	margin: 0;
-	position: fixed; /*Cho menu cố định 1 vị trí với top và left*/
+	position: fixed;
 }
 
 header .navigation .logo img {
@@ -97,7 +97,7 @@ header .banner img {
 	width: 100%;
 }
 
-.banner{
+.banner {
 	padding-top: 0;
 }
 
@@ -168,7 +168,7 @@ header .slogan p {
 	box-shadow: 0px 0px 10px 3px #888888;
 }
 
-.section.plans .item > div {
+.section.plans .item>div {
 	margin-bottom: 8px;
 	font-size: 14px;
 }
